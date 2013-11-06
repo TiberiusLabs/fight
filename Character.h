@@ -11,6 +11,7 @@
 
 using namespace std;
 
+typedef vector<Effect> Effects;
 class Character
 {
     public:
@@ -113,27 +114,17 @@ class Character
         enum MAGIC{ BLACK, WHITE, RED, RAGE };
 
     protected:
-        struct Modifier {
-            // the name of the effect
-            string effectName;
-            // the cost of the spell
-            int cost;
-            // number of rounds this remains in effect
-            int rounds;
-            // the number of rounds remaining since the spell was cast
-            int roundsLeft;
-            // the (signed) value of the modifier per round
-            int modVal;
-            // the +/- spread on the modifier per round
-            int modSpread;
-            // the type of magic that the effect is
-            MAGIC magicType;
-            // whether the modifier is dispellable
-            bool dispellable;
+        struct Effect {
+            string effectName;          // the name of the effect
+            int cost;                   // the cost of the spell
+            int rounds;                 // number of rounds this remains in effect
+            int roundsLeft;             // the number of rounds remaining since the spell was cast
+            int modVal;                 // the (signed) value of the modifier per round
+            int modSpread;              // the +/- spread on the modifier per round
+            MAGIC magicType;            // the type of magic that the effect is
+            bool dispellable;           // whether the modifier is dispellable
         };
 
-        string actions[4];
-        int cost[4];
         string name;
         int maxHP;
         int maxSP;
@@ -144,9 +135,9 @@ class Character
         int eva;
         bool alive;
         bool enemyChar;
-        vector<Modifier> availableSpells;
-        vector<Modifier> enemyEffects;
-        vector<Modifier> friendlyEffects;
+        vector<Effect> availableSpells;
+        vector<Effect> enemyEffects;
+        vector<Effect> friendlyEffects;
 };
 
 #endif

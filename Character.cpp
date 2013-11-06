@@ -5,15 +5,24 @@
 #include <iostream>
 #include "Character.h"
 #include "Random.h"
+#include "Dice.h"
+
 using namespace std;
 
 Character::Character ()
 {
-    actions[0] = "Attack";
-    cost[0] = 0;
-    cost[1] = 0;
-    cost[2] = 0;
-    cost[3] = 0;
+    Effect attack;
+    attack.effectName = "Attack";
+    attack.cost = 0;
+    attack.rounds = 0;
+    attack.dispellable = false;
+    /*
+       actions[0] = "Attack";
+       cost[0] = 0;
+       cost[1] = 0;
+       cost[2] = 0;
+       cost[3] = 0;
+     */
     name = "Character";
     maxHP = 100;
     maxSP = 100;
@@ -28,11 +37,13 @@ Character::Character ()
 
 Character::Character (bool isEnemyChar)
 {
-    actions[0] = "Attack";
-    cost[0] = 0;
-    cost[1] = 0;
-    cost[2] = 0;
-    cost[3] = 0;
+    /*
+       actions[0] = "Attack";
+       cost[0] = 0;
+       cost[1] = 0;
+       cost[2] = 0;
+       cost[3] = 0;
+     */
     name = "Character";
     maxHP = 100;
     maxSP = 100;
@@ -47,21 +58,23 @@ Character::Character (bool isEnemyChar)
 
 int Character::numActions ()
 {
-    for (int i = 0; i < 4; i++)
-        if (actions[i] == "")
-            return i;
+    /*
+       for (int i = 0; i < 4; i++)
+       if (actions[i] == "")
+       return i;
 
+     */
     return 4;
 }
 
 string Character::action (int actionNum)
 {
-    return actions[actionNum];
+    return availableSpells[actionNum].effectName;
 }
 
 int Character::getCost (int actionNum)
 {
-    return cost[actionNum];
+    return availableSpells[actionNum].cost;
 }
 
 void Character::setName (string newName)
@@ -94,8 +107,8 @@ void Character::damage (int damage)
     HP -= damage;
 
     if (HP < 1) {
-      HP = 0;
-      kill();
+        HP = 0;
+        kill();
     }
 }
 
@@ -189,12 +202,14 @@ void Character::onEvade (Character * target)
 
 void Character::doAction (int actionNum, Character * target)
 {
-    spendSP(cost[actionNum -1]);  
+    /*
+       spendSP(cost[actionNum -1]);  
+     */
 
     if (actionNum == 1) {
         attack(target);
         if (target->isEnemy())
-	    cout << target->status() << endl;
+            cout << target->status() << endl;
     }
 
     cout << endl;
@@ -203,25 +218,25 @@ void Character::doAction (int actionNum, Character * target)
 void Character::attack (Character * target)
 {
     string enemyName = isEnemy() ? name : target->getName();
-  
+
     cout << attackText(enemyName) << endl;
     int hitChance = random(100);
-    
+
     if (hitChance <= 80 - target->getEva()) {
         // attack hits
         // base damage is 15-40 * attacker's attack / target's defense
 
         int dam = (random(25) + 15) * att / target->getDef(); 
         target->damage(dam);
-	cout << "\t" << dam << " damage!\n";
+        cout << "\t" << dam << " damage!\n";
 
-	if (isEnemy() && !target->isAlive()) cout << "\tYou are dead.\n";
+        if (isEnemy() && !target->isAlive()) cout << "\tYou are dead.\n";
 
     } else if (hitChance <= 80) {
         // enemy evades
-      
+
         cout << (isEnemy() ? "\tYou evade the attack!\n" : "\tHe evades the attack!\n");
-	target->onEvade(this);
+        target->onEvade(this);
 
     } else {
         // atack misses
