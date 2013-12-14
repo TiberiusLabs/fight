@@ -1,0 +1,62 @@
+[
+    {
+        "character_type": "",
+        "type": "",
+        "stat": "",
+        "name": "",
+        "description": "",
+        "player_battle_text": "",
+        "enemy_battle_text": "",
+        "duration": 0,
+        "power": 0,
+        "cost": 0
+    },
+    {
+        "character_type": "magic",
+        "type": "ATTACK",
+        "stat": "INTELLIGENCE",
+        "name": "Fireball",
+        "description": "A ball of fire is thrown at the enemy.",
+        "player_battle_text": "You throw a ball of fire at your enemy.",
+        "enemy_battle_text": "Your enemy throws a ball of fire at you.",
+        "duration": 0,
+        "power": 10,
+        "cost": 30
+    },
+    {
+        "character_type": "magic",
+        "type": "HEAL",
+        "stat": "INTELLIGENCE",
+        "name": "Cure",
+        "description": "Use magic to restore your body.",
+        "player_battle_text": "You channel divine energy into your body, restoring it.",
+        "enemy_battle_text": "Your enemy channels divine energy to restore his body.",
+        "duration": 0,
+        "power": 0,
+        "cost": 0
+    },
+    {
+        "character_type": "magic",
+        "type": "BUFF",
+        "stat": "INTELLIGENCE",
+        "name": "Focus",
+        "description": "Raise your Intelligence by clearing your head of distractions.",
+        "player_battle_text": "You take a deep breath and focus on the task at hand.",
+        "enemy_battle_text": "Your enemy takes a moment to collect his thoughts.",
+        "duration": 0,
+        "power": 0,
+        "cost": 30
+    },
+    {
+        "character_type": "magic",
+        "type": "DEBUFF",
+        "stat": "EVADE",
+        "name": "Tether",
+        "description": "Magically anchor your enemy to the spot so they cannot Evade.",
+        "player_battle_text": "You tether your enemy to the ground she stands on.",
+        "enemy_battle_text": "",
+        "duration": 0,
+        "power": 0,
+        "cost": 0
+    }
+]

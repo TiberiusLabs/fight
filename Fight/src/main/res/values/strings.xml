@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="fight_title_text">Fight!</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_example">Example action</string>
+    <string name="action_about">About</string>
+    <string name="ability_selection_title">Select 3 Abilities (long press to view details)</string>
+    <string name="item_selection_title">Select Items (choose 3)</string>
+    <string name="hero_ready">Hero Ready!</string>
+    <string name="monster_ready">Monster Ready!</string>
+    <string name="heroes_avail">Available Heroes</string>
+    <string name="monsters_avail">Available Monsters</string>
+    <string name="reset_monster_text">Reset Monster</string>
+    <string name="reset_hero_text">Reset Hero</string>
+
+</resources>

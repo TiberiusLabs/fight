@@ -1,0 +1,62 @@
+[
+    {
+        "character_type": "",
+        "type": "",
+        "stat": "",
+        "name": "",
+        "description": "",
+        "player_battle_text": "",
+        "enemy_battle_text": "",
+        "duration": 0,
+        "power": 0,
+        "cost": 0
+    },
+    {
+        "character_type": "ranged",
+        "type": "ATTACK",
+        "stat": "DEXTERITY",
+        "name": "Vital Shot",
+        "description": "A well-aimed bow shot.",
+        "player_battle_text": "You fire off a well-aimed arrow at your enemy.",
+        "enemy_battle_text": "Your enemy sends a piercing arrow your way.",
+        "duration": 0,
+        "power": 10,
+        "cost": 30
+    },
+    {
+        "character_type": "ranged",
+        "type": "HEAL",
+        "stat": "INTELLIGENCE",
+        "name": "Healing Herb",
+        "description": "Apply healing forest herbs to stop bleeding.",
+        "player_battle_text": "You apply some healing forest herbs to one of your wounds to stop the bleeding.",
+        "enemy_battle_text": "Your enemy pauses to apply a poultice to her wounds.",
+        "duration": 0,
+        "power": 10,
+        "cost": 30
+    },
+    {
+        "character_type": "ranged",
+        "type": "BUFF",
+        "stat": "DEXTERITY",
+        "name": "Limber Up",
+        "description": "Raise your Dexterity by taking a moment to warm up.",
+        "player_battle_text": "You take a moment to stretch and warm up.",
+        "enemy_battle_text": "Your enemy pauses stretch and warm up.",
+        "duration": 0,
+        "power": 0,
+        "cost": 30
+    },
+    {
+        "character_type": "ranged",
+        "type": "DEBUFF",
+        "stat": "ATTACK",
+        "name": "Hand Shot",
+        "description": "A shot to the hand do reduce Attack accuracy.",
+        "player_battle_text": "You fire an arrow towards your enemy's hand.",
+        "enemy_battle_text": "Your enemy fires and arrow towards your hand.",
+        "duration": 0,
+        "power": 0,
+        "cost": 30
+    }
+]

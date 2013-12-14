@@ -1,0 +1,195 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical"
+    tools:context="ssu.cs360.fight.BattleFragment">
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Enemy Name"
+            android:id="@+id/enemyNameTextView"
+            android:layout_marginBottom="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enemy HP "
+            android:id="@+id/enemyHP"
+            android:layout_below="@+id/enemyNameTextView" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 100/100 [|||||||||||||||||||]"
+            android:textStyle="bold"
+            android:id="@+id/enemyHPBar"
+            android:textColor="#ff0000"
+            android:layout_toRightOf="@+id/enemyHP"
+            android:layout_alignBaseline="@+id/enemyHP" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/scrollView"
+        android:layout_marginLeft="10dp">
+
+        <LinearLayout
+            android:id="@+id/battleTextLayout"
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"></LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Player Name"
+                android:id="@+id/playerNameTextView"
+                android:layout_marginBottom="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Player HP "
+                android:id="@+id/playerHP"
+                android:layout_marginBottom="5dp"
+                android:layout_below="@+id/playerNameTextView" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="100/100 [|||||||||||||||||||]"
+                android:textStyle="bold"
+                android:textColor="#ff0000"
+                android:id="@+id/playerHPBar"
+                android:layout_toRightOf="@+id/playerHP"
+                android:layout_below="@+id/playerNameTextView" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Player SP "
+                android:id="@+id/playerSP"
+                android:layout_below="@+id/playerHP" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="100/100 [|||||||||||||||||||]"
+                android:textStyle="bold"
+                android:id="@+id/playerSPBar"
+                android:textColor="#6897bb"
+                android:layout_below="@+id/playerHP"
+                android:layout_toRightOf="@+id/playerSP" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="30dp"
+                android:text="Attack"
+                android:background="@drawable/battle_button"
+                android:textColor="#dddddd"
+                android:id="@+id/attackButton" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="30dp"
+                android:text="Ability 1"
+                android:background="@drawable/battle_button"
+                android:textColor="#dddddd"
+                android:id="@+id/ability1Button"
+                android:layout_below="@+id/attackButton" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:background="#07000000"
+                android:paddingRight="10dp"
+                android:text="0 SP"
+                android:id="@+id/ability1SPView"
+                android:layout_alignParentRight="true"
+                android:layout_alignBaseline="@+id/ability1Button"/>
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="30dp"
+                android:text="Ability 2"
+                android:background="@drawable/battle_button"
+                android:textColor="#dddddd"
+                android:id="@+id/ability2Button"
+                android:layout_below="@+id/ability1Button" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:background="#07000000"
+                android:paddingRight="10dp"
+                android:text="0 SP"
+                android:id="@+id/ability2SPView"
+                android:layout_alignParentRight="true"
+                android:layout_alignBaseline="@+id/ability2Button"/>
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="30dp"
+                android:text="Ability 3"
+                android:background="@drawable/battle_button"
+                android:textColor="#dddddd"
+                android:id="@+id/ability3Button"
+                android:layout_below="@+id/ability2Button" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:background="#07000000"
+                android:paddingRight="10dp"
+                android:text="0 SP"
+                android:id="@+id/ability3SPView"
+                android:layout_alignParentRight="true"
+                android:layout_alignBaseline="@+id/ability3Button"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

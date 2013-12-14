@@ -1,0 +1,62 @@
+[
+    {
+        "character_type": "",
+        "type": "",
+        "stat": "",
+        "name": "",
+        "description": "",
+        "player_battle_text": "",
+        "enemy_battle_text": "",
+        "duration": 0,
+        "power": 0,
+        "cost": 0
+    },
+    {
+        "character_type": "melee",
+        "type": "ATTACK",
+        "stat": "STRENGTH",
+        "name": "Power Attack",
+        "description": "An especially powerful physical strike.",
+        "player_battle_text": "You swing hard at your enemy.",
+        "enemy_battle_text": "Your enemy swings hard at you.",
+        "duration": 0,
+        "power": 10,
+        "cost": 30
+    },
+    {
+        "character_type": "melee",
+        "type": "HEAL",
+        "stat": "INTELLIGENCE",
+        "name": "Patch Up",
+        "description": "Bandage up your damaged limbs.",
+        "player_battle_text": "You apply a bandage to one of your wounds.",
+        "enemy_battle_text": "Your enemy pauses to bandage one of his wounds.",
+        "duration": 0,
+        "power": 10,
+        "cost": 30
+    },
+    {
+        "character_type": "melee",
+        "type": "BUFF",
+        "stat": "STRENGTH",
+        "name": "Accumulate",
+        "description": "Charge up your Strength.",
+        "player_battle_text": "You flex your muscles, focussing your strength.",
+        "enemy_battle_text": "Your enemy flexes her muscles, focussing her strength.",
+        "duration": 0,
+        "power": 0,
+        "cost": 30
+    },
+    {
+        "character_type": "melee",
+        "type": "DEBUFF",
+        "stat": "DEFENSE",
+        "name": "Break Armor",
+        "description": "Damage a piece of your enemy's armor to reduce her Defense.",
+        "player_battle_text": "You aim at a piece of your enemy's armor and swing.",
+        "enemy_battle_text": "Your enemy sends a blow right for a piece of your armor.",
+        "duration": 0,
+        "power": 0,
+        "cost": 30
+    }
+]
